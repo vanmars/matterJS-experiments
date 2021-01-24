@@ -25,7 +25,7 @@ World.add(engine.world, [topWall, leftWall, ball, bottomWall]);
 Engine.run(engine);
 Render.run(render);
 
-
+// Add Shape Functions
 var addCircle = function () {
  return Bodies.circle(Math.random()*400 + 30, 30, 30);
 };
@@ -38,7 +38,7 @@ var addRect = function () {
  return Bodies.rectangle(Math.random()*400 + 30, 30, 100, 60);
 };
 
-
+// Event Listeners Tied to Buttons
 document.querySelector('.add-circle').addEventListener('click', function () {
     World.add(engine.world, addCircle());
 });
@@ -49,4 +49,12 @@ document.querySelector('.add-square').addEventListener('click', function () {
 
 document.querySelector('.add-rect').addEventListener('click', function () {
     World.add(engine.world, addRect());
+})
+
+document.querySelector('.rotate').addEventListener('click', function() {
+  Matter.Composite.rotate(engine.world, -Math.PI/4, { x:400, y:200})
+})
+
+document.querySelector('.clear').addEventListener('click', function() {
+    World.clear(engine.world, true);
 })

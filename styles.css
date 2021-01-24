@@ -4,12 +4,13 @@ body {
 }
 
 #shapes {
-  background-color: powderblue;
+  /* background-color: powderblue; */
 }
 
-
 canvas {
-  margin: 20px auto;
+  margin: 10px auto;
+  padding: 100px 20px;
+
 }
 
 button {
