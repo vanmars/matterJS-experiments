@@ -26,6 +26,7 @@ var bottomWall = Bodies.rectangle(400, 350, 720, 20, { isStatic: true });
 var box = Bodies.rectangle(460, 120, 40, 40, {
   render: {
     fillStyle: "pink",
+    strokeStyle: "black",
     lineWidth: 15,
   }
 });
